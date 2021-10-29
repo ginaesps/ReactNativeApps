@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import CustomButton from './android/src/components/CustomButton';
 
 const App = () => {
+  const [age, setAge] = useState(3);
+
+  const add = () => {
+    if (age === 150) return;
+    setAge(age + 1);
+  };
+
+  const substract = () => {
+    if (age === 0) return;
+    setAge(age - 1);
+  };
+
   return (
     <View style={styles.Container}>
       <Text style={styles.Text}>My age is:</Text>
       <View style={styles.ControlsContainer}>
-        <Text style={styles.Age}>0</Text>
+        <Text style={styles.Age}>{age}</Text>
         <View style={styles.ButtonContainer}>
-          <CustomButton text="-" />
-          <CustomButton text="+" />
+          <CustomButton text="-" onClick={substract}/>
+          <CustomButton text="+" onClick={() => add}/>
         </View>
       </View>
     </View>
