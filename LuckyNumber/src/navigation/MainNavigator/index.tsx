@@ -1,13 +1,19 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../screens/home';
-import Results from '../screens/results';
+
+import SplashScreen from '../../screens/SplashScreen';
+import Home from '../../screens/HomeScreen/home';
+import Results from '../../screens/results';
 
 const Stack = createStackNavigator();
 
-function MyStack() {
+function Component() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      initialRouteName="Splash"
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen
         name="Home"
         component={Home}
@@ -22,4 +28,4 @@ function MyStack() {
   );
 }
 
-export default MyStack;
+export default Component;
