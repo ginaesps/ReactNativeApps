@@ -8,9 +8,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Title from '../src/components/Title';
+import Title from '../../components/Title';
 
-const Home = ({navigation}) => {
+const Home = () => {
   const [age, setAge] = useState('');
   const [username, setUsername] = useState('');
   const luckyNumber = () => {
