@@ -43,7 +43,7 @@ const App = () => {
     <View style={styles.background}>
       <View style={styles.containerVid}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title}>Lucky Number</Text>
+          <Text style={styles.title}>LUCKY NUMBER</Text>
         </View>
         <View style={styles.bannerContainer}>
           <Image
@@ -173,7 +173,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 36,
-    fontWeight: '600',
+    fontWeight: 'bold',
+    letterSpacing: 5,
     color: 'yellow',
   },
   containerTitle: {

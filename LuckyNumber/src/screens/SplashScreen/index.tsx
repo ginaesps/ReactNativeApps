@@ -1,19 +1,19 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import React, {useEffect} from 'react';
+import React from 'react';
 import {ImageBackground, StyleSheet, View} from 'react-native';
 
 const image = require('../../assets/images/LuckPortrait.jpg');
 
 interface Props extends NativeStackScreenProps<any, any> {}
 
-const Component = (props: Props) => {
-  const {navigation} = props;
+const Component = () => {
+  // const {navigation} = props;
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigation.navigate('Login');
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     navigation.navigate('Login');
+  //   }, 3000);
+  // }, []);
 
   return (
     <View style={styles.Container}>

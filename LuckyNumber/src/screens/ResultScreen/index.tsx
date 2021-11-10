@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  ToastAndroid,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -13,34 +12,36 @@ import Title from '../../components/Title';
 const Component = () => {
   const [age, setAge] = useState('');
   const [username, setUsername] = useState('');
-  const luckyNumber = () => {
-    if (!username || age == null) {
-      ToastAndroid.show('Please be sure to fill in the blanks', 1000);
-      return;
-    }
-    let a = Number(age);
+  // const luckyNumber = () => {
+  //   if (!username || age == null) {
+  //     ToastAndroid.show('Please be sure to fill in the blanks', 1000);
+  //     return;
+  //   }
+  //   let a = Number(age);
 
-    if (a < 1 || a > 120) {
-      ToastAndroid.show('Please enter a valid age', 1000);
-      return;
-    }
-    if (a < 10) {
-      a *= 7;
-    }
-    while (a > 9) {
-      a = a
-        .toString()
-        .split('')
-        .reduce((x, y) => Number(x) + Number(y));
-    }
-  };
+  //   if (a < 1 || a > 120) {
+  //     ToastAndroid.show('Please enter a valid age', 1000);
+  //     return;
+  //   }
+  //   if (a < 10) {
+  //     a *= 7;
+  //   }
+  //   while (a > 9) {
+  //     a = a
+  //       .toString()
+  //       .split('')
+  //       .reduce((x, y) => Number(x) + Number(y));
+  //   }
+  // };
+
+  console.log(username, age);
 
   return (
     <View style={styles.containerVid}>
       <Title />
       <View style={styles.bannerContainer}>
         <Image
-          source={require('../src/img/homeTarot.jpg')}
+          source={require('../../assets/images/homeTarot.jpg')}
           style={styles.banner}
           resizeMode="contain"
         />
@@ -55,7 +56,7 @@ const Component = () => {
         onChangeText={num => setAge(num)}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate('Results')}
+        // onPress={() => navigation.navigate('Results')}
         style={styles.button}>
         <Text style={styles.buttonText}>Obtain number</Text>
       </TouchableOpacity>
