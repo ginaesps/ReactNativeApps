@@ -29,9 +29,7 @@ const Component = (props: Props) => {
   }, [email, password]);
 
   const doLogin = () => {
-    if (email === '1' && password === '1') return;
-
-    navigation.navigate('Home');
+    if (email === '1' && password === '1') navigation.navigate('Home');
   };
 
   return (
